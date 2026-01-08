@@ -1,0 +1,22 @@
+<!-- Right Panel: Dispatch Rankings -->
+<div id="panel-dispatch" class="panel panel-right fixed right-0 top-14 bottom-0 w-96 bg-white z-[999] border-l border-gray-100 overflow-hidden flex flex-col">
+    <div class="p-4 border-b border-gray-100">
+        <h2 class="font-semibold text-gray-900 mb-3">Dispatch Ranking</h2>
+        <div class="flex gap-2">
+            <input type="text" id="caller-location" placeholder="Enter caller location or click map"
+                   class="flex-1 px-3 py-2 text-sm border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-900">
+            <button onclick="setCallerMode()" id="caller-mode-btn" class="px-3 py-2 text-sm border border-gray-200 rounded-md hover:bg-gray-50 transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div id="dispatch-list" class="flex-1 overflow-y-auto"></div>
+    <div class="border-t border-gray-100 p-4 bg-gray-50">
+        <div class="text-xs text-gray-500">
+            Ranking based on: Distance + Availability + 24h Utilization
+        </div>
+    </div>
+</div>

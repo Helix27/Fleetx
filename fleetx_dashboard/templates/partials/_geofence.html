@@ -1,0 +1,16 @@
+<!-- Right Panel: Geofence Editor -->
+<div id="panel-geofence" class="panel panel-right fixed right-0 top-14 bottom-0 w-80 bg-white z-[999] border-l border-gray-100 overflow-hidden flex flex-col">
+    <div class="p-4 border-b border-gray-100 flex items-center justify-between">
+        <h2 class="font-semibold text-gray-900">Geofences</h2>
+        <button onclick="toggleGeofenceDraw()" id="draw-geofence-btn" class="px-3 py-1.5 text-sm bg-gray-900 text-white rounded-md hover:bg-gray-800 transition-colors">
+            + Draw
+        </button>
+    </div>
+    <div class="p-4 border-b border-gray-100">
+        <select id="geofence-vehicle-filter" class="w-full px-3 py-2 text-sm border border-gray-200 rounded-md focus:outline-none"
+                onchange="filterGeofences()">
+            <option value="">All Vehicles</option>
+        </select>
+    </div>
+    <div id="geofence-list" class="flex-1 overflow-y-auto"></div>
+</div>

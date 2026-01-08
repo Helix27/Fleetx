@@ -1,0 +1,48 @@
+<!-- Geofence Edit Modal -->
+<div id="geofence-modal" class="hidden fixed inset-0 z-[1100] flex items-center justify-center bg-black/30 backdrop-blur-sm">
+    <div class="bg-white rounded-lg shadow-xl w-96 max-h-[80vh] overflow-hidden">
+        <div class="p-4 border-b border-gray-100">
+            <h3 class="font-semibold text-gray-900" id="geofence-modal-title">New Geofence</h3>
+        </div>
+        <form id="geofence-form" class="p-4 space-y-4">
+            <input type="hidden" id="geofence-id">
+            <input type="hidden" id="geofence-coords">
+            <div>
+                <label class="block text-sm text-gray-600 mb-1">Name</label>
+                <input type="text" id="geofence-name" required
+                       class="w-full px-3 py-2 text-sm border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-900">
+            </div>
+            <div>
+                <label class="block text-sm text-gray-600 mb-1">Assign to Vehicle</label>
+                <select id="geofence-vehicle" class="w-full px-3 py-2 text-sm border border-gray-200 rounded-md focus:outline-none">
+                    <option value="">All Vehicles (Global)</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-sm text-gray-600 mb-1">Color</label>
+                <input type="color" id="geofence-color" value="#3b82f6"
+                       class="w-full h-10 rounded-md cursor-pointer">
+            </div>
+            <div class="flex gap-4">
+                <label class="flex items-center gap-2 text-sm text-gray-600">
+                    <input type="checkbox" id="geofence-alert-enter" checked class="rounded">
+                    Alert on enter
+                </label>
+                <label class="flex items-center gap-2 text-sm text-gray-600">
+                    <input type="checkbox" id="geofence-alert-exit" checked class="rounded">
+                    Alert on exit
+                </label>
+            </div>
+            <div class="flex gap-2 pt-2">
+                <button type="button" onclick="closeGeofenceModal()"
+                        class="flex-1 px-4 py-2 text-sm border border-gray-200 rounded-md hover:bg-gray-50 transition-colors">
+                    Cancel
+                </button>
+                <button type="submit"
+                        class="flex-1 px-4 py-2 text-sm bg-gray-900 text-white rounded-md hover:bg-gray-800 transition-colors">
+                    Save
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

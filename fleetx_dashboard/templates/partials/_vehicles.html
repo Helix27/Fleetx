@@ -1,0 +1,9 @@
+<!-- Left Panel: Vehicle List -->
+<div id="panel-vehicles" class="panel panel-left fixed left-0 top-14 bottom-0 w-80 bg-white z-[999] border-r border-gray-100 overflow-hidden flex flex-col">
+    <div class="p-4 border-b border-gray-100">
+        <input type="text" id="vehicle-search" placeholder="Search vehicles..."
+               class="w-full px-3 py-2 text-sm border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
+               oninput="filterVehicles(this.value)">
+    </div>
+    <div id="vehicle-list" class="flex-1 overflow-y-auto"></div>
+</div>

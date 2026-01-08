@@ -1,0 +1,18 @@
+{
+  "credentials": {
+    "email": "Shubham.shinde@jsw.in",
+    "password": "iQ55vL0S@"
+  },
+  "api": {
+    "base_url": "https://api.fleetx.io",
+    "login_url": "https://app.fleetx.io/users/login"
+  },
+  "vehicle_ids": [
+    2053889
+  ],
+  "polling_interval_seconds": 60,
+  "database": {
+    "path": "fleetx_data.db"
+  }
+}
+

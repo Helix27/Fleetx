@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+
+{% block title %}FleetX Dashboard{% endblock %}
+
+{% block extra_styles %}
+        #map { width: 100%; height: 100%; }
+
+        .vehicle-marker {
+            transition: all 0.3s ease;
+        }
+        .vehicle-marker:hover {
+            transform: scale(1.2);
+        }
+
+        .status-running { background: #22c55e; }
+        .status-idle { background: #eab308; }
+        .status-stopped { background: #ef4444; }
+
+        @keyframes pulse-ring {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(2); opacity: 0; }
+        }
+        .pulse-marker::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: inherit;
+            animation: pulse-ring 2s infinite;
+        }
+
+        .route-line {
+            stroke-dasharray: 10, 5;
+            animation: dash 30s linear infinite;
+        }
+        @keyframes dash {
+            to { stroke-dashoffset: -1000; }
+        }
+
+        .stat-value {
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* Leaflet Draw toolbar styling */
+        .leaflet-draw-toolbar {
+            margin-top: 10px;
+        }
+        .leaflet-draw-toolbar a {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 5px;
+        }
+        .leaflet-draw-toolbar a:hover {
+            background-color: #f0f0f0;
+        }
+        .leaflet-draw-actions {
+            background: white;
+            border-radius: 4px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+        }
+        .leaflet-draw-actions li:first-child a {
+            border-radius: 4px 0 0 4px;
+        }
+        .leaflet-draw-actions li:last-child a {
+            border-radius: 0 4px 4px 0;
+        }
+{% endblock %}
+
+{% block nav_items %}
+            <button onclick="togglePanel('vehicles')" class="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md transition-colors">
+                Vehicles
+            </button>
+            <button onclick="togglePanel('dispatch')" class="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md transition-colors">
+                Dispatch
+            </button>
+            <button onclick="togglePanel('geofence')" class="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md transition-colors">
+                Geofences
+            </button>
+{% endblock %}
+
+{% block nav_status %}
+            <div class="flex items-center gap-2 text-sm">
+                <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                <span class="text-gray-600"><span id="running-count" class="font-medium text-gray-900">0</span> Running</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm">
+                <span class="w-2 h-2 rounded-full bg-yellow-500"></span>
+                <span class="text-gray-600"><span id="idle-count" class="font-medium text-gray-900">0</span> Idle</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm">
+                <span class="w-2 h-2 rounded-full bg-red-500"></span>
+                <span class="text-gray-600"><span id="stopped-count" class="font-medium text-gray-900">0</span> Stopped</span>
+            </div>
+{% endblock %}
+
+{% block content %}
+    <!-- Main Map Container -->
+    <div id="map"></div>
+
+    <!-- Include Panel Partials -->
+    {% include "partials/_vehicles.html" %}
+    {% include "partials/_stats.html" %}
+    {% include "partials/_dispatch.html" %}
+    {% include "partials/_geofence.html" %}
+    {% include "partials/_fleet_stats.html" %}
+{% endblock %}
+
+{% block modals %}
+    {% include "partials/_geofence_modal.html" %}
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+{% endblock %}

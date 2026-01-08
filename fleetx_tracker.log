@@ -1,0 +1,164 @@
+2025-12-01 10:34:17,460 - INFO - Configuration loaded from config.json
+2025-12-01 10:34:17,476 - INFO - Database setup complete: fleetx_data.db
+2025-12-01 10:34:17,476 - INFO - Starting FleetX Vehicle Location Tracker
+2025-12-01 10:34:17,476 - INFO - No saved token found, logging in...
+2025-12-01 10:34:17,476 - INFO - Initializing Selenium WebDriver for login...
+2025-12-01 10:34:19,334 - INFO - Navigating to login page...
+2025-12-01 10:34:23,354 - INFO - Filling login form...
+2025-12-01 10:34:23,902 - INFO - Submitting login form...
+2025-12-01 10:34:27,081 - INFO - Current URL after login: https://app.fleetx.io/dashboard/realtime/overview
+2025-12-01 10:34:27,081 - INFO - Extracting access token from localStorage...
+2025-12-01 10:34:27,091 - INFO - Successfully extracted access token: 709922c7-d37e-472a-b...
+2025-12-01 10:34:27,092 - INFO - Access token saved for future use
+2025-12-01 10:34:29,391 - INFO - Monitoring 2 vehicle(s)
+2025-12-01 10:34:29,391 - INFO - Polling interval: 300 seconds
+2025-12-01 10:34:29,391 - INFO - --- Starting new fetch cycle ---
+2025-12-01 10:34:29,391 - INFO - Fetching data for vehicle ID: 2053889
+2025-12-01 10:34:33,594 - INFO - Successfully fetched data for vehicle 2053889
+2025-12-01 10:34:33,594 - INFO - Data stored for vehicle 2053889 (changes detected)
+2025-12-01 10:34:35,611 - INFO - Fetching data for vehicle ID: 2054348
+2025-12-01 10:34:36,547 - ERROR - Failed to fetch data for vehicle 2054348: 404
+2025-12-01 10:34:36,547 - ERROR - Response: {"error":"invalid_request","error_description":"no historical location found"}
+2025-12-01 10:34:36,547 - WARNING - No data retrieved for vehicle 2054348
+2025-12-01 10:34:38,553 - INFO - Cycle complete. Waiting 300 seconds...
+2025-12-01 10:34:55,394 - INFO - Tracker stopped by user
+2025-12-01 10:34:55,394 - INFO - Database connection closed
+2025-12-01 10:36:31,516 - INFO - Configuration loaded from config.json
+2025-12-01 10:36:31,518 - INFO - Database setup complete: fleetx_data.db
+2025-12-01 10:36:31,518 - INFO - Loaded saved access token
+2025-12-01 10:36:31,518 - INFO - Starting FleetX Vehicle Location Tracker
+2025-12-01 10:36:31,519 - INFO - Using saved access token
+2025-12-01 10:36:31,519 - INFO - Monitoring 1 vehicle(s)
+2025-12-01 10:36:31,519 - INFO - Polling interval: 60 seconds
+2025-12-01 10:36:31,519 - INFO - --- Starting new fetch cycle ---
+2025-12-01 10:36:31,519 - INFO - Fetching data for vehicle ID: 2053889
+2025-12-01 10:36:31,629 - INFO - Successfully fetched data for vehicle 2053889
+2025-12-01 10:36:31,639 - INFO - Data stored for vehicle 2053889 (changes detected)
+2025-12-01 10:36:33,640 - INFO - Cycle complete. Waiting 60 seconds...
+2025-12-01 10:37:33,641 - INFO - --- Starting new fetch cycle ---
+2025-12-01 10:37:33,641 - INFO - Fetching data for vehicle ID: 2053889
+2025-12-01 10:37:33,771 - INFO - Successfully fetched data for vehicle 2053889
+2025-12-01 10:37:33,771 - INFO - No changes detected for vehicle 2053889, skipping storage
+2025-12-01 10:37:35,776 - INFO - Cycle complete. Waiting 60 seconds...
+2025-12-01 10:38:35,777 - INFO - --- Starting new fetch cycle ---
+2025-12-01 10:38:35,777 - INFO - Fetching data for vehicle ID: 2053889
+2025-12-01 10:38:35,932 - INFO - Successfully fetched data for vehicle 2053889
+2025-12-01 10:38:35,934 - INFO - No changes detected for vehicle 2053889, skipping storage
+2025-12-01 10:38:37,936 - INFO - Cycle complete. Waiting 60 seconds...
+2025-12-01 10:39:37,937 - INFO - --- Starting new fetch cycle ---
+2025-12-01 10:39:37,937 - INFO - Fetching data for vehicle ID: 2053889
+2025-12-01 10:39:38,046 - INFO - Successfully fetched data for vehicle 2053889
+2025-12-01 10:39:38,046 - INFO - No changes detected for vehicle 2053889, skipping storage
+2025-12-01 10:39:40,057 - INFO - Cycle complete. Waiting 60 seconds...
+2025-12-01 10:40:40,058 - INFO - --- Starting new fetch cycle ---
+2025-12-01 10:40:40,058 - INFO - Fetching data for vehicle ID: 2053889
+2025-12-01 10:40:40,142 - INFO - Successfully fetched data for vehicle 2053889
+2025-12-01 10:40:40,142 - INFO - No changes detected for vehicle 2053889, skipping storage
+2025-12-01 10:40:42,144 - INFO - Cycle complete. Waiting 60 seconds...
+2025-12-01 10:41:42,147 - INFO - --- Starting new fetch cycle ---
+2025-12-01 10:41:42,147 - INFO - Fetching data for vehicle ID: 2053889
+2025-12-01 10:41:42,269 - INFO - Successfully fetched data for vehicle 2053889
+2025-12-01 10:41:42,284 - INFO - Data stored for vehicle 2053889 (changes detected)
+2025-12-01 10:41:44,292 - INFO - Cycle complete. Waiting 60 seconds...
+2025-12-01 10:42:44,293 - INFO - --- Starting new fetch cycle ---
+2025-12-01 10:42:44,293 - INFO - Fetching data for vehicle ID: 2053889
+2025-12-01 10:42:44,384 - INFO - Successfully fetched data for vehicle 2053889
+2025-12-01 10:42:44,402 - INFO - Data stored for vehicle 2053889 (changes detected)
+2025-12-01 10:42:46,403 - INFO - Cycle complete. Waiting 60 seconds...
+2025-12-01 10:43:46,404 - INFO - --- Starting new fetch cycle ---
+2025-12-01 10:43:46,405 - INFO - Fetching data for vehicle ID: 2053889
+2025-12-01 10:43:46,887 - INFO - Successfully fetched data for vehicle 2053889
+2025-12-01 10:43:46,896 - INFO - Data stored for vehicle 2053889 (changes detected)
+2025-12-01 10:43:48,897 - INFO - Cycle complete. Waiting 60 seconds...
+2025-12-01 10:44:48,899 - INFO - --- Starting new fetch cycle ---
+2025-12-01 10:44:48,899 - INFO - Fetching data for vehicle ID: 2053889
+2025-12-01 10:44:49,093 - INFO - Successfully fetched data for vehicle 2053889
+2025-12-01 10:44:49,112 - INFO - Data stored for vehicle 2053889 (changes detected)
+2025-12-01 10:44:51,116 - INFO - Cycle complete. Waiting 60 seconds...
+2025-12-01 10:45:51,117 - INFO - --- Starting new fetch cycle ---
+2025-12-01 10:45:51,118 - INFO - Fetching data for vehicle ID: 2053889
+2025-12-01 10:45:51,515 - INFO - Successfully fetched data for vehicle 2053889
+2025-12-01 10:45:51,537 - INFO - Data stored for vehicle 2053889 (changes detected)
+2025-12-01 10:45:53,538 - INFO - Cycle complete. Waiting 60 seconds...
+2025-12-01 10:46:53,539 - INFO - --- Starting new fetch cycle ---
+2025-12-01 10:46:53,539 - INFO - Fetching data for vehicle ID: 2053889
+2025-12-01 10:46:53,650 - INFO - Successfully fetched data for vehicle 2053889
+2025-12-01 10:46:53,650 - INFO - No changes detected for vehicle 2053889, skipping storage
+2025-12-01 10:46:55,654 - INFO - Cycle complete. Waiting 60 seconds...
+2025-12-01 10:47:55,655 - INFO - --- Starting new fetch cycle ---
+2025-12-01 10:47:55,655 - INFO - Fetching data for vehicle ID: 2053889
+2025-12-01 10:47:55,815 - INFO - Successfully fetched data for vehicle 2053889
+2025-12-01 10:47:55,816 - INFO - No changes detected for vehicle 2053889, skipping storage
+2025-12-01 10:47:57,818 - INFO - Cycle complete. Waiting 60 seconds...
+2025-12-01 10:48:57,818 - INFO - --- Starting new fetch cycle ---
+2025-12-01 10:48:57,818 - INFO - Fetching data for vehicle ID: 2053889
+2025-12-01 10:48:58,375 - INFO - Successfully fetched data for vehicle 2053889
+2025-12-01 10:48:58,376 - INFO - No changes detected for vehicle 2053889, skipping storage
+2025-12-01 10:49:00,378 - INFO - Cycle complete. Waiting 60 seconds...
+2025-12-01 10:50:00,379 - INFO - --- Starting new fetch cycle ---
+2025-12-01 10:50:00,380 - INFO - Fetching data for vehicle ID: 2053889
+2025-12-01 10:50:01,590 - INFO - Successfully fetched data for vehicle 2053889
+2025-12-01 10:50:01,590 - INFO - No changes detected for vehicle 2053889, skipping storage
+2025-12-01 10:50:03,605 - INFO - Cycle complete. Waiting 60 seconds...
+2025-12-01 10:51:03,606 - INFO - --- Starting new fetch cycle ---
+2025-12-01 10:51:03,606 - INFO - Fetching data for vehicle ID: 2053889
+2025-12-01 10:51:03,735 - INFO - Successfully fetched data for vehicle 2053889
+2025-12-01 10:51:03,737 - INFO - No changes detected for vehicle 2053889, skipping storage
+2025-12-01 10:51:05,738 - INFO - Cycle complete. Waiting 60 seconds...
+2025-12-01 10:51:41,399 - INFO - Tracker stopped by user
+2025-12-01 10:51:41,399 - INFO - Database connection closed
+2026-01-08 08:53:19,895 - INFO - Configuration loaded from config.json
+2026-01-08 08:53:19,899 - INFO - Database setup complete: fleetx_data.db
+2026-01-08 08:53:19,900 - INFO - Saved token is too old, will refresh
+2026-01-08 08:53:19,900 - INFO - Starting FleetX Vehicle Location Tracker
+2026-01-08 08:53:19,901 - INFO - No saved token found, logging in...
+2026-01-08 08:53:19,901 - INFO - Initializing Selenium WebDriver for login...
+2026-01-08 08:53:26,514 - INFO - Navigating to login page...
+2026-01-08 08:53:29,062 - INFO - Filling login form...
+2026-01-08 08:53:29,761 - INFO - Submitting login form...
+2026-01-08 08:53:32,921 - INFO - Current URL after login: https://app.fleetx.io/dashboard/realtime/overview
+2026-01-08 08:53:32,921 - INFO - Extracting access token from localStorage...
+2026-01-08 08:53:32,930 - INFO - Successfully extracted access token: 709922c7-d37e-472a-b...
+2026-01-08 08:53:32,932 - INFO - Access token saved for future use
+2026-01-08 08:53:35,192 - INFO - Monitoring 1 vehicle(s)
+2026-01-08 08:53:35,193 - INFO - Polling interval: 60 seconds
+2026-01-08 08:53:35,193 - INFO - --- Starting new fetch cycle ---
+2026-01-08 08:53:35,193 - INFO - Fetching data for vehicle ID: 2053889
+2026-01-08 08:53:35,363 - INFO - Successfully fetched data for vehicle 2053889
+2026-01-08 08:53:35,369 - INFO - Data stored for vehicle 2053889 (changes detected)
+2026-01-08 08:53:37,371 - INFO - Cycle complete. Waiting 60 seconds...
+2026-01-08 08:54:37,372 - INFO - --- Starting new fetch cycle ---
+2026-01-08 08:54:37,372 - INFO - Fetching data for vehicle ID: 2053889
+2026-01-08 08:54:37,808 - INFO - Successfully fetched data for vehicle 2053889
+2026-01-08 08:54:37,809 - INFO - No changes detected for vehicle 2053889, skipping storage
+2026-01-08 08:54:39,809 - INFO - Cycle complete. Waiting 60 seconds...
+2026-01-08 08:54:50,925 - INFO - Tracker stopped by user
+2026-01-08 08:54:50,926 - INFO - Database connection closed
+2026-01-08 09:34:03,301 - INFO - Configuration loaded from config.json
+2026-01-08 09:34:03,303 - INFO - Database setup complete: fleetx_data.db
+2026-01-08 09:34:03,305 - INFO - Loaded saved access token
+2026-01-08 09:34:03,305 - INFO - Starting FleetX Vehicle Location Tracker
+2026-01-08 09:34:03,307 - INFO - Using saved access token
+2026-01-08 09:34:03,308 - INFO - Monitoring 1 vehicle(s)
+2026-01-08 09:34:03,309 - INFO - Polling interval: 60 seconds
+2026-01-08 09:34:03,309 - INFO - --- Starting new fetch cycle ---
+2026-01-08 09:34:03,310 - INFO - Fetching data for vehicle ID: 2053889
+2026-01-08 09:34:03,491 - INFO - Successfully fetched data for vehicle 2053889
+2026-01-08 09:34:03,496 - INFO - Data stored for vehicle 2053889 (changes detected)
+2026-01-08 09:34:05,497 - INFO - Cycle complete. Waiting 60 seconds...
+2026-01-08 09:34:50,699 - INFO - Tracker stopped by user
+2026-01-08 09:34:50,699 - INFO - Database connection closed
+2026-01-08 09:34:54,580 - INFO - Configuration loaded from config.json
+2026-01-08 09:34:54,581 - INFO - Database setup complete: fleetx_data.db
+2026-01-08 09:34:54,581 - INFO - Loaded saved access token
+2026-01-08 09:34:54,581 - INFO - Starting FleetX Vehicle Location Tracker
+2026-01-08 09:34:54,581 - INFO - Using saved access token
+2026-01-08 09:34:54,581 - INFO - Monitoring 1 vehicle(s)
+2026-01-08 09:34:54,581 - INFO - Polling interval: 60 seconds
+2026-01-08 09:34:54,582 - INFO - --- Starting new fetch cycle ---
+2026-01-08 09:34:54,582 - INFO - Fetching data for vehicle ID: 2053889
+2026-01-08 09:34:54,742 - INFO - Successfully fetched data for vehicle 2053889
+2026-01-08 09:34:54,752 - INFO - Data stored for vehicle 2053889 (changes detected)
+2026-01-08 09:34:56,754 - INFO - Cycle complete. Waiting 60 seconds...
+2026-01-08 09:35:03,132 - INFO - Tracker stopped by user
+2026-01-08 09:35:03,133 - INFO - Database connection closed

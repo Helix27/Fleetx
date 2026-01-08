@@ -1,0 +1,26 @@
+{
+    "loadedVehicles": 0,
+    "unloadedVehicles": 0,
+    "loadingVehicles": 0,
+    "unloadingVehicles": 0,
+    "scheduledVehicles": 0,
+    "ontimeVehicles": 0,
+    "earlyVehicles": 0,
+    "lateVehicles": 0,
+    "notOnJobVehicles": 2,
+    "onJobVehicles": 0,
+    "totalVehicles": 2,
+    "removedVehicles": 0,
+    "vehicles": [
+        {
+            "vehicleId": 2054348,
+            "vehicleNumber": "MH08BE1533",
+            "status": "OTHERS"
+        },
+        {
+            "vehicleId": 2053889,
+            "vehicleNumber": "MH08BC7866",
+            "status": "OTHERS"
+        }
+    ]
+}

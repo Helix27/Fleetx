@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}FleetX Dashboard{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { width: 100vw; height: 100vh; overflow: hidden; }
+
+        .panel {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .panel-left { transform: translateX(-100%); }
+        .panel-left.open { transform: translateX(0); }
+        .panel-right { transform: translateX(100%); }
+        .panel-right.open { transform: translateX(0); }
+        .panel-bottom { transform: translateY(100%); }
+        .panel-bottom.open { transform: translateY(0); }
+
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #888; border-radius: 2px; }
+
+        {% block extra_styles %}{% endblock %}
+    </style>
+</head>
+<body class="bg-white font-sans antialiased">
+    <!-- Top Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 z-[1000] flex items-center justify-between px-4 py-3 bg-white/90 backdrop-blur-sm border-b border-gray-100">
+        <div class="flex items-center gap-4">
+            <h1 class="text-lg font-semibold text-gray-900 tracking-tight">FleetX</h1>
+            <div class="h-4 w-px bg-gray-200"></div>
+            {% block nav_items %}{% endblock %}
+        </div>
+        <div class="flex items-center gap-6">
+            {% block nav_status %}{% endblock %}
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    {% block modals %}{% endblock %}
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>
