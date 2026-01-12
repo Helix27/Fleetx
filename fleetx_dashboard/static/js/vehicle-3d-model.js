@@ -28,9 +28,9 @@ function init3DModel() {
     // Create a scene for the 3D model
     modelScene = new THREE.Scene();
 
-    // Create camera with isometric view
-    modelCamera = new THREE.OrthographicCamera(-3, 3, 3, -3, 0.1, 1000);
-    modelCamera.position.set(5, 8, 5); // Isometric angle position
+    // Create camera with isometric view - will be adjusted after model loads
+    modelCamera = new THREE.OrthographicCamera(-5, 5, 5, -5, 0.1, 1000);
+    modelCamera.position.set(8, 12, 8); // Isometric angle position
     modelCamera.lookAt(0, 0, 0); // Look at the model center
 
     // Create renderer with error handling
@@ -79,7 +79,7 @@ function init3DModel() {
             // Get model dimensions for debugging
             const box = new THREE.Box3().setFromObject(car3DModel);
             const size = box.getSize(new THREE.Vector3());
-            console.log('Model loaded! Dimensions:', size);
+            console.log('Model loaded! Original dimensions:', size);
             console.log('Model position:', car3DModel.position);
             console.log('Model rotation:', car3DModel.rotation);
             console.log('Model scale:', car3DModel.scale);
@@ -88,12 +88,36 @@ function init3DModel() {
             const center = box.getCenter(new THREE.Vector3());
             car3DModel.position.sub(center);
 
-            // Normalize model size
+            // Dynamic scaling - target size based on model dimensions
+            // For very large models (>100 units), scale to 3 units
+            // For medium models (10-100 units), scale to 2.5 units
+            // For small models (<10 units), scale to 2 units
             const maxDimension = Math.max(size.x, size.y, size.z);
-            const scale = 2 / maxDimension; // Scale to fit in a 2-unit box
+            let targetSize;
+            if (maxDimension > 100) {
+                targetSize = 3; // Large models need more space
+            } else if (maxDimension > 10) {
+                targetSize = 2.5;
+            } else {
+                targetSize = 2;
+            }
+
+            const scale = targetSize / maxDimension;
             car3DModel.scale.set(scale, scale, scale);
 
+            // Adjust camera to fit the scaled model
+            const scaledSize = targetSize;
+            const cameraSize = scaledSize * 1.5; // Add 50% padding
+            modelCamera.left = -cameraSize;
+            modelCamera.right = cameraSize;
+            modelCamera.top = cameraSize;
+            modelCamera.bottom = -cameraSize;
+            modelCamera.updateProjectionMatrix();
+
             console.log('After scaling - Model scale:', car3DModel.scale);
+            console.log('Target size:', targetSize, 'units');
+            console.log('Camera bounds adjusted to:', cameraSize);
+            console.log('Model should now be visible!');
 
             // Add to scene
             modelScene.add(car3DModel);
