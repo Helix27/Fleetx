@@ -338,7 +338,9 @@ function renderVehicleStats(stats) {
         <!-- Hourly Activity Chart -->
         <div>
             <h3 class="text-xs uppercase tracking-wider text-gray-400 mb-3">Activity by Hour</h3>
-            <canvas id="hourly-chart" height="120"></canvas>
+            <div style="height: 180px; max-height: 180px; min-height: 180px;">
+                <canvas id="hourly-chart"></canvas>
+            </div>
         </div>
 
         <!-- Tracking Info -->
